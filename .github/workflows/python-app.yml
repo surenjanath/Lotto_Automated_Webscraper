@@ -47,13 +47,13 @@ jobs:
 
     - name: Clear Old Analysis in README
       run: |
-        sed -i '/{{analysis_placeholder}}/d' README.md
+        sed -i '/{{analysis_placeholder}}/d s/{{analysis_placeholder}}/{{analysis_placeholder}}\n' README.md
       shell: bash
 
     - name: Update README with Analysis
       run: |
         analysis="${{ steps.read-analysis.outputs.analysis }}"
-        sed -i "s/{{analysis_placeholder}}/$analysis/" README.md
+        sed -i "s/{{analysis_placeholder}}/{{analysis_placeholder}}\n- $analysis/" README.md
       shell: bash
 
     - name: Commit and Push
