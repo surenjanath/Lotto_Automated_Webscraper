@@ -39,6 +39,11 @@ jobs:
     - name: execute py script # run main.py
       run: python "async_scraper.py"
 
+    - name: Clear Old Analysis in README
+      run: |
+        sed -i '/{{analysis_placeholder}}/a\ ' README.md && sed -i '/{{analysis_placeholder}}/,$d' README.md
+      shell: bash
+
     - name: Read Analysis File
       id: read-analysis
       run: |
@@ -48,9 +53,9 @@ jobs:
     - name: Update README with Analysis
       run: |
         analysis=$(awk '{printf "%s\\n", $0}' basic_analysis_report.txt)
-        sed -i "/{{analysis_placeholder}}/!b;n;c\\$analysis" README.md
+        sed -i "/{{analysis_placeholder}}/!b;c\\$analysis" README.md
       shell: bash
-      
+
     - name: Commit and Push
       run: |
         git config --global user.name ${{ secrets.GitName }}
