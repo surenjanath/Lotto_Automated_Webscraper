@@ -11,6 +11,7 @@ This is a Python web scraper designed to fetch lotto results from a specified we
 
 ## Requirements
 
+
 - Python 3.7 or higher
 - aiohttp
 - pandas
