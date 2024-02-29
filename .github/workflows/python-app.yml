@@ -53,7 +53,7 @@ jobs:
     - name: Update README with Analysis
       run: |
         analysis=$(cat analysis_report.html)
-        sed -i "/{{analysis_placeholder}}/a $analysis" README.md
+        sed -i "/{{analysis_placeholder}}/a\$analysis" README.md
       shell: bash
 
     - name: Commit and Push
