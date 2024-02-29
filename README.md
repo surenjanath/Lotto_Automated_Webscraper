@@ -44,7 +44,6 @@ This repository includes a GitHub Actions workflow that automatically performs a
 
 <!--START_SECTION:analysis-->
     
-{{analysis_placeholder}}
     
 <!--END_SECTION:analysis-->
 

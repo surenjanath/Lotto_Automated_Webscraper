@@ -1,4 +1,4 @@
-Basic Analysis:
+### Basic Analysis:
 Total number of draws: 2305
 Average jackpot amount: $3611693.41
 Most common numbers drawn:
