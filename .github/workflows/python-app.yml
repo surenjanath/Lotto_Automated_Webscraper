@@ -47,12 +47,12 @@ jobs:
     - name: Read Analysis File
       id: read-analysis
       run: |
-        analysis=$(<basic_analysis_report.txt)
+        analysis=$(<analysis_report.html)
         echo "::set-output name=analysis::$analysis"
 
     - name: Update README with Analysis
       run: |
-        analysis=$(awk '{printf "%s\\n", $0}' basic_analysis_report.txt)
+        analysis=$(awk '{printf "%s\\n", $0}' analysis_report.html)
         sed -i "/{{analysis_placeholder}}/!b;n;c\\$analysis" README.md
       shell: bash
 

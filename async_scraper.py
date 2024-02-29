@@ -165,6 +165,13 @@ def add_lotto_data_to_db(session, lotto_data):
                     print('[*] Error:', e)
     session.commit()
 
+def generate_html_report(basic_report, additional_report):
+    html_report = "<h2>Basic Analysis:</h2>\n"
+    html_report += basic_report.replace("\n", "<br>") + "\n"
+    html_report += "<h2>Additional Analysis:</h2>\n"
+    html_report += additional_report.replace("\n", "<br>") + "\n"
+    return html_report
+
 async def run_scraper(urls, db_session):
     scraper = WebScraper(urls)
     await scraper.main()
@@ -195,9 +202,12 @@ async def run_scraper(urls, db_session):
     # Perform additional analysis
     additional_analysis_report = additional_analysis(scraper.ParsedData)
 
-    # Write basic analysis report to file
-    with open('analysis_report.txt', 'w') as file:
-        file.write(basic_analysis_report + additional_analysis_report)
+    # Generate HTML report
+    html_report = generate_html_report(basic_analysis_report, additional_analysis_report)
+
+    # Write HTML report to file
+    with open('analysis_report.html', 'w') as file:
+        file.write(html_report)
 
     print("Analysis reports generated successfully.")
 
