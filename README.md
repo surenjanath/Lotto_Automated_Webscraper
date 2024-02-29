@@ -57,3 +57,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - This project was inspired by the need to automate the collection of lotto results for analysis and historical record-keeping.
 - Special thanks to the developers of aiohttp, pandas, and SQLAlchemy for their excellent libraries.
+
