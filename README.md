@@ -55,7 +55,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 <!--START_SECTION:analysis-->
     
 {{analysis_placeholder}}
- 
+ - ### Basic Analysis:
 - Total number of draws: 2305
 
 <!--END_SECTION:analysis-->
