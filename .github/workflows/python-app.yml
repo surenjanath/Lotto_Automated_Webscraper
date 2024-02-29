@@ -1,7 +1,7 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# This workflow will install Python dependencies, run tests, and lint with a single version of Python
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Python application
+name: Lotto Results Scraper
 
 on:
   push:
@@ -39,25 +39,25 @@ jobs:
     - name: execute py script # run main.py
       run: python "async_scraper.py"
 
-    - name: Capture Last Run Information
-      id: last-run
+    - name: Read Analysis File
+      id: read-analysis
       run: |
-        current_time_trinidad_tobago=$(TZ="America/Port_of_Spain" date +"%Y-%m-%d %H:%M:%S")
-        echo "::set-output name=last_run::$current_time_trinidad_tobago"
+        analysis=$(<basic_analysis_report.txt)
+        echo "::set-output name=analysis::$analysis"
 
-
-    - name: Update README
+    - name: Update README with Analysis
       run: |
-        last_run="${{ steps.last-run.outputs.last_run}}"
-        sed -i "s/{{last_run_history}}/{{last_run_history}}\n- $last_run/" README.md
+        analysis=$(awk '{printf "%s\\n", $0}' basic_analysis_report.txt)
+        sed -i "/{{analysis_placeholder}}/!b;n;c\\$analysis" README.md
       shell: bash
-
+      
     - name: Commit and Push
       run: |
         git config --global user.name ${{ secrets.GitName }}
         git config --global user.email ${{ secrets.GitEmail }}
         git add .  # Add your database file
-        git commit -m "Update database"  # Commit changes
+        git add README.md  # Add the updated README file
+        git commit -m "Update README with analysis"  # Commit changes
 
         # Set up authentication using the GitHub token secret
         git remote set-url origin "https://github.com/$GITHUB_REPOSITORY"
@@ -68,4 +68,3 @@ jobs:
         git push
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
-

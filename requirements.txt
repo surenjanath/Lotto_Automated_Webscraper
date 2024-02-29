@@ -1,3 +1,5 @@
 aiohttp
 requests
 SQLAlchemy
+pandas
+lxml
