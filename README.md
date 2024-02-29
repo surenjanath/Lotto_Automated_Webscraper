@@ -40,14 +40,6 @@ Contributions are welcome! If you find any bugs or have suggestions for improvem
 
 This repository includes a GitHub Actions workflow that automatically performs analysis on the scraped lotto results. The workflow is triggered on each push to the `main` branch. It runs a Python script to analyze the data and generates reports.
 
-### Analysis Results
-
-<!--START_SECTION:analysis-->
-    
-    
-<!--END_SECTION:analysis-->
-
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
@@ -57,3 +49,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - This project was inspired by the need to automate the collection of lotto results for analysis and historical record-keeping.
 - Special thanks to the developers of aiohttp, pandas, and SQLAlchemy for their excellent libraries.
 
+  
+## Analysis Results
+
+<!--START_SECTION:analysis-->
+    
+{{analysis_placeholder}}  
+
+<!--END_SECTION:analysis-->
