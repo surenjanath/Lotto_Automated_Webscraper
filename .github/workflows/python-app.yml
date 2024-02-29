@@ -48,7 +48,7 @@ jobs:
     - name: Update README with Analysis
       run: |
         analysis="${{ steps.read-analysis.outputs.analysis }}"
-        sed -i "/{{analysis_placeholder}}\n/!b;n;c\ - $analysis" README.md
+        sed -i "/{{analysis_placeholder}}/!b;n;c\ \n- $analysis" README.md
       shell: bash
       
     - name: Commit and Push
