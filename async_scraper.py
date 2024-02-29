@@ -109,15 +109,6 @@ class WebScraper:
     async def main(self):
         tasks = []
         async with aiohttp.ClientSession() as session:
-            tasks = [self.fetch(session, year, month, url) for year in YEAR for month in MONTH for url in self.urls]
-            lotto_data = await asyncio.gather(*tasks)
-            for data in lotto_data:
-                if data is not None:
-                    self.ParsedData.extend(data)
-
-    async def main(self):
-        tasks = []
-        async with aiohttp.ClientSession() as session:
             current_year = datetime.datetime.now().year
             current_month = datetime.datetime.now().strftime('%b')
             current_month_index = MONTH.index(current_month)
@@ -205,7 +196,7 @@ async def run_scraper(urls, db_session):
     additional_analysis_report = additional_analysis(scraper.ParsedData)
 
     # Write basic analysis report to file
-    with open('basic_analysis_report.txt', 'w') as file:
+    with open('analysis_report.txt', 'w') as file:
         file.write(basic_analysis_report + additional_analysis_report)
 
     print("Analysis reports generated successfully.")
@@ -215,17 +206,17 @@ def additional_analysis(data):
     latest_entry = data[-1] if data else None
 
     # Generate analysis report
-    analysis_report = "\nLatest Entry Analysis:\n"
+    analysis_report = "\n### Latest Entry Analysis:\n"
     if latest_entry:
-        analysis_report += f"Draw Date: {latest_entry['Date']}\n"
-        analysis_report += f"Draw Number: {latest_entry['Draw#']}\n"
-        analysis_report += f"Numbers Drawn: {latest_entry['Numbers']}\n"
-        analysis_report += f"Power Ball: {latest_entry['Power Ball']}\n"
-        analysis_report += f"Multiplier: {latest_entry['Multiplier']}\n"
-        analysis_report += f"Jackpot: {latest_entry['Jackpot']}\n"
-        analysis_report += f"Wins: {latest_entry['Wins']}\n"
+        analysis_report += f"- Draw Date: {latest_entry['Date']}\n"
+        analysis_report += f"- Draw Number: {latest_entry['Draw#']}\n"
+        analysis_report += f"- Numbers Drawn: {latest_entry['Numbers']}\n"
+        analysis_report += f"- Power Ball: {latest_entry['Power Ball']}\n"
+        analysis_report += f"- Multiplier: {latest_entry['Multiplier']}\n"
+        analysis_report += f"- Jackpot: {latest_entry['Jackpot']}\n"
+        analysis_report += f"- Wins: {latest_entry['Wins']}\n"
     else:
-        analysis_report += "No data available.\n"
+        analysis_report += "- No data available.\n"
     return analysis_report
 
 if __name__ == "__main__":
