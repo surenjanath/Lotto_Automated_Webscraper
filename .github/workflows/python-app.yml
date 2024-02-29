@@ -39,10 +39,10 @@ jobs:
     - name: execute py script # run main.py
       run: python "async_scraper.py"
 
-    - name: Clear Old Analysis in README
-      run: |
-        sed -i '/{{analysis_placeholder}}/,$ {/^{{analysis_placeholder}}$/!d}' README.md
-      shell: bash
+    # - name: Clear Old Analysis in README
+    #   run: |
+    #     sed -i '/{{analysis_placeholder}}/,$ {/^{{analysis_placeholder}}$/!d}' README.md
+    #   shell: bash
 
     - name: Read Analysis File
       id: read-analysis
