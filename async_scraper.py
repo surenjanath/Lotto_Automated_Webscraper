@@ -168,7 +168,7 @@ def add_lotto_data_to_db(session, lotto_data):
 def generate_html_report(basic_report, additional_report):
     html_report = "<h2>Basic Analysis:</h2>\n"
     html_report += basic_report.replace("\n", "<br>") + "\n"
-    html_report += "<h2>Additional Analysis:</h2>\n"
+    html_report += "<h2>Additional Data:</h2>\n"
     html_report += additional_report.replace("\n", "<br>") + "\n"
     return html_report
 
@@ -216,7 +216,7 @@ def additional_analysis(data):
     latest_entry = data[-1] if data else None
 
     # Generate analysis report
-    analysis_report = "\n### Latest Entry Analysis:\n"
+    analysis_report = "\nLatest Entry Analysis:\n"
     if latest_entry:
         analysis_report += f"- Draw Date: {latest_entry['Date']}\n"
         analysis_report += f"- Draw Number: {latest_entry['Draw#']}\n"
