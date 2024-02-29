@@ -166,9 +166,9 @@ def add_lotto_data_to_db(session, lotto_data):
     session.commit()
 
 def generate_html_report(basic_report, additional_report):
-    html_report = "<h2>Basic Analysis:</h2>\n"
+    html_report = "<h3>Basic Analysis:</h3>\n"
     html_report += basic_report.replace("\n", "<br>") + "\n"
-    html_report += "<h2>Additional Data:</h2>\n"
+    html_report += "<h3>Additional Data:</h3>\n"
     html_report += additional_report.replace("\n", "<br>") + "\n"
     return html_report
 
