@@ -1,44 +1,46 @@
-# YTS Movie Data Scraper and Database Importer
+# Lotto Results Web Scraper
 
-This Python script is designed to scrape movie data from the YTS website and store it in a SQLite database. The code leverages various libraries and technologies to achieve this, including asyncio, aiohttp for web scraping, SQLAlchemy for database management, and requests for API requests.
-
-# Youtube Video Showcase
-Youtube Video Can be Found here : [https://youtu.be/7Wc_3Zv8AOY](https://youtu.be/7Wc_3Zv8AOY)
-
-# Automated Status Update
-
-GITHUB ACTION LAST RAN :
-{{last_run_history}}
-
+This is a Python web scraper designed to fetch lotto results from a specified website and store them in a SQLite database. It utilizes asyncio and aiohttp for asynchronous web scraping and SQLAlchemy for database operations.
 
 ## Features
 
-- **Web Scraping:** The script uses asynchronous web scraping with aiohttp to fetch movie data from the YTS website. It extracts movie details, including title, year, rating, runtime, and more.
+- Asynchronous fetching of lotto results from a specified website.
+- Parsing of fetched data and storage in a SQLite database.
+- Automated stopping at the current month and year to avoid fetching future lotto results.
+- Error handling and logging for robustness and reliability.
 
-- **Database Storage:** The scraped movie data is stored in a SQLite database. The code defines a database schema using SQLAlchemy and includes tables for movies, genres, and error logs. Movie-genre associations are handled through a many-to-many relationship.
+## Requirements
 
-- **Error Logging:** In case of errors during the scraping process, the code logs error information, including status, description, number of items processed, and the time taken.
+- Python 3.7 or higher
+- aiohttp
+- pandas
+- SQLAlchemy
 
-## How to Use
+## Installation
 
-1. Clone this repository or download the code to your local machine.
+1. Clone the repository.
+2. Install the required dependencies.
 
-2. Install the required Python libraries by running `pip install aiohttp sqlalchemy request`.
+## Usage
 
-3. Run the script by executing `python YTS_Movie Webscraper.py`. Make sure to set up the working directory and database location as needed.
+1. Modify the `urls` variable in `async_scraper.py` to include the URLs of the websites containing lotto results.
+2. Run the scraper.
+3. The scraper will fetch lotto results, parse them, and store them in the SQLite database.
 
-4. The script will fetch movie data from the YTS website, process it, and store it in a SQLite database.
+## Configuration
 
-5. You can further customize the code to fit your specific needs, such as adjusting the batch size for database commits or modifying error handling.
+- You can customize the database name and location by modifying the `Database_Name` and `Location` variables in `async_scraper.py`.
+- Adjust the scraping frequency by modifying the `YEAR` and `MONTH` variables in `async_scraper.py` to include the desired range of years and months.
 
-## Dependencies
+## Contributing
 
-- [aiohttp](https://docs.aiohttp.org/en/stable/)
-- [SQLAlchemy](https://www.sqlalchemy.org/)
-- [requests](https://docs.python-requests.org/en/latest/)
+Contributions are welcome! If you find any bugs or have suggestions for improvement, please open an issue or submit a pull request.
 
 ## License
 
-This project is open-source and available under the [MIT License](LICENSE).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+## Acknowledgements
 
+- This project was inspired by the need to automate the collection of lotto results for analysis and historical record-keeping.
+- Special thanks to the developers of aiohttp, pandas, and SQLAlchemy for their excellent libraries.
