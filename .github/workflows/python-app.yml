@@ -48,9 +48,9 @@ jobs:
     - name: Update README with Analysis
       run: |
         analysis="${{ steps.read-analysis.outputs.analysis }}"
-        sed -i "s/{{analysis_placeholder}}/{{analysis_placeholder}}\n- $analysis/" README.md
+        sed -i "/{{analysis_placeholder}}\n/!b;n;c\ - $analysis" README.md
       shell: bash
-
+      
     - name: Commit and Push
       run: |
         git config --global user.name ${{ secrets.GitName }}
