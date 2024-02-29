@@ -192,8 +192,8 @@ async def run_scraper(urls, db_session):
     most_common_numbers = number_counts.head(10)
 
     # Generate basic analysis report
-    basic_analysis_report = f"### Basic Analysis:\n"
-    basic_analysis_report += f"Total number of draws: {total_draws}\n"
+
+    basic_analysis_report = f"Total number of draws: {total_draws}\n"
     basic_analysis_report += f"Average jackpot amount: ${average_jackpot:.2f}\n"
     basic_analysis_report += "Most common numbers drawn:\n"
     for number, count in most_common_numbers.items():
