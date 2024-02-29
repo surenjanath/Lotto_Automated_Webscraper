@@ -41,7 +41,7 @@ jobs:
 
     - name: Clear Old Analysis in README
       run: |
-        sed -i '/{{analysis_placeholder}}/,$d' README.md
+        sed -i '/{{analysis_placeholder}}/q' README.md
       shell: bash
 
     - name: Read Analysis File
