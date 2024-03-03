@@ -185,7 +185,7 @@ def generate_html_report(basic_analysis_report, additional_analysis_report, late
 
 
     ## Latest Entry Data
-    DrawDate = datetime.datetime.strptime(latest_entry['Date'],"%Y-%m-%d").strftime("%d-%B-%Y")
+    DrawDate = datetime.datetime.strptime(latest_entry['Date'],"%Y-%m-%d").strftime("%d %B %Y")
     html_report = f"""<h1>Lottery Analysis Report</h1>
             <div class="basic-analysis">
                 <h2>Basic Analysis:</h2>
@@ -196,7 +196,7 @@ def generate_html_report(basic_analysis_report, additional_analysis_report, late
                 <p>{average_jackpot_cash}</p>
             </div>
             <div class="most-common-numbers">
-                <h3>Most Common Numbers Drawn:</h3>
+                <h3>Top 5 Most Common Numbers Drawn:</h3>
                 <table>
                     <tr>
                         <th>Number</th>
@@ -207,22 +207,22 @@ def generate_html_report(basic_analysis_report, additional_analysis_report, late
             </div>
             <div class="additional-analysis">
                 <h2>Latest NLCB Lotto Plus Results:</h2>
+                <div class="draw-date">
+                    <h3>Draw Date:</h3>
+                    <p>{DrawDate}</p>
+                </div>
+                <div class="numbers-drawn">
+                    <h3>Numbers Drawn:</h3>
+                    <p>{numbers_drawn_formatted}</p>
+                </div>
+
+                <div class="latest-Information">
+                    <h3>Other Information:</h3>
+                    <p>{additional}</p>
+                </div>
             </div>
 
-            <div class="draw-date">
-                <h3>Draw Date:</h3>
-                <p>{DrawDate}</p>
-            </div>
 
-            <div class="numbers-drawn">
-                <h3>Numbers Drawn:</h3>
-                <p>{numbers_drawn_formatted}</p>
-            </div>
-
-            <div class="latest-Information">
-                <h3>Other Information:</h3>
-                <p>{additional}</p>
-            </div>
         """
     return html_report
 
