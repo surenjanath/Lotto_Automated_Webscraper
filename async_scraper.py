@@ -215,10 +215,10 @@ def generate_html_report(basic_analysis_report, additional_analysis_report, late
                     <h3>Numbers Drawn:</h3>
                     <p>{numbers_drawn_formatted}</p>
                 </div>
-                <div class="latest-Information">
-                    <h3>Other Information:</h3>
-                    <p>{additional}</p>
-                </div>
+                <br/>
+                <h3>Other Information:</h3>
+                <p>{additional}</p>
+
             </div>
 
 
