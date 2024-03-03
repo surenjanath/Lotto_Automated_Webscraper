@@ -80,11 +80,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
                 </table>
             </div>
             <div class="additional-analysis">
-                <h2>Latest NLCB Lotto Plus Results</h2>
+                <h2>Latest NLCB Lotto Plus Results:</h2>
             </div>
 
             <div class="draw-date">
-                <h3>Draw Date</h3>
+                <h3>Draw Date:</h3>
                 <p>02-March-2024</p>
             </div>
 
@@ -94,8 +94,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
             </div>
 
             <div class="latest-Information">
-                <h3>Other Information</h3>
+                <h3>Other Information:</h3>
                 <p>- Power Ball: 7<br>- Multiplier: 4<br>- Jackpot: 0<br>- Wins: -1<br></p>
             </div>
-
         
