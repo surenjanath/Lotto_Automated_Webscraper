@@ -173,39 +173,58 @@ def generate_html_report(basic_analysis_report, additional_analysis_report, late
     numbers_drawn_list = latest_entry['Numbers'].split("-")
     numbers_drawn_formatted = ", ".join(numbers_drawn_list)
 
+
+
     # Generate HTML for most common numbers table
     most_common_numbers_html = ""
     for number, frequency in common_numbers:
         most_common_numbers_html += "<tr><td>{}</td><td>{}</td></tr>".format(number, frequency)
 
-    html_report = """<h1>Lottery Analysis Report</h1>
+    basic = basic_analysis_report.replace("\n", "<br>")
+    additional = additional_analysis_report.replace("\n", "<br>")
+
+
+    ## Latest Entry Data
+    DrawDate = datetime.datetime.strptime(latest_entry['Date'],"%Y-%m-%d").strftime("%d-%B-%Y")
+    html_report = f"""<h1>Lottery Analysis Report</h1>
             <div class="basic-analysis">
                 <h2>Basic Analysis:</h2>
-                <p>{}</p>
-            </div>
-            <div class="additional-analysis">
-                <h2>Additional Data:</h2>
-                <p>{}</p>
+                <p>{basic}</p>
             </div>
             <div class="average-jackpot">
                 <h2>Average Jackpot Amount:</h2>
-                <p>{}</p>
-            </div>
-            <div class="numbers-drawn">
-                <h2>Numbers Drawn:</h2>
-                <p>{}</p>
+                <p>{average_jackpot_cash}</p>
             </div>
             <div class="most-common-numbers">
-                <h2>Most Common Numbers Drawn:</h2>
+                <h3>Most Common Numbers Drawn:</h3>
                 <table>
                     <tr>
                         <th>Number</th>
                         <th>Frequency</th>
                     </tr>
-                    {}
+                    {most_common_numbers_html}
                 </table>
             </div>
-        """.format(basic_analysis_report.replace("\n", "<br>"), additional_analysis_report.replace("\n", "<br>"), average_jackpot_cash, numbers_drawn_formatted, most_common_numbers_html)
+            <div class="additional-analysis">
+                <h2>Latest NLCB Lotto Plus Results</h2>
+            </div>
+
+            <div class="draw-date">
+                <h3>Draw Date</h3>
+                <p>{DrawDate}</p>
+            </div>
+
+            <div class="numbers-drawn">
+                <h3>Numbers Drawn:</h3>
+                <p>{numbers_drawn_formatted}</p>
+            </div>
+
+            <div class="latest-Information">
+                <h3>Other Information</h3>
+                <p>{additional}</p>
+            </div>
+
+        """
     return html_report
 
 async def run_scraper(urls, db_session):
@@ -251,11 +270,8 @@ def additional_analysis(data):
     latest_entry = data[-1] if data else None
 
     # Generate analysis report
-    analysis_report = "\nLatest Entry Analysis:\n"
+    analysis_report = ""
     if latest_entry:
-        analysis_report += f"- Draw Date: {latest_entry['Date']}\n"
-        analysis_report += f"- Draw Number: {latest_entry['Draw#']}\n"
-        analysis_report += f"- Numbers Drawn: {latest_entry['Numbers']}\n"
         analysis_report += f"- Power Ball: {latest_entry['Power Ball']}\n"
         analysis_report += f"- Multiplier: {latest_entry['Multiplier']}\n"
         analysis_report += f"- Jackpot: {latest_entry['Jackpot']}\n"
