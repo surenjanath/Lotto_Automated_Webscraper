@@ -40,6 +40,7 @@ Contributions are welcome! If you find any bugs or have suggestions for improvem
 ## GitHub Actions
 
 This repository includes a GitHub Actions workflow that automatically performs analysis on the scraped lotto results. The workflow is triggered on each push to the `main` branch. It runs a Python script to analyze the data and generates reports.
+Code Runs every Thursday and Sunday @ 12 AM
 
 ## License
 
@@ -97,4 +98,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
             </div>
 
 
-        
