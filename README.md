@@ -55,54 +55,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 <!--START_SECTION:analysis-->
 {{analysis_placeholder}}
-<!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lottery Analysis Report</title>
-    <style>
-        body {{
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }}
-        .container {{
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }}
-        h1, h2, h3 {{
-            color: #333;
-            margin-bottom: 10px;
-        }}
-        h2 {{
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-        }}
-        p {{
-            margin-bottom: 5px;
-        }}
-        table {{
-            width: 100%;
-            border-collapse: collapse;
-        }}
-        th, td {{
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }}
-        th {{
-            background-color: #f2f2f2;
-        }}
-    </style>
-    </head><body>
-        <div class="container">
-            <h1>Lottery Analysis Report</h1>
+<h1>Lottery Analysis Report</h1>
             <div class="basic-analysis">
                 <h2>Basic Analysis:</h2>
                 <p>Total number of draws: 2306<br></p>
@@ -134,6 +87,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 </td></tr>
                 </table>
             </div>
-        </div>
-    </body>
-    </html>
+        
