@@ -166,10 +166,57 @@ def add_lotto_data_to_db(session, lotto_data):
     session.commit()
 
 def generate_html_report(basic_report, additional_report):
-    html_report = "<h3>Basic Analysis:</h3>\n"
-    html_report += basic_report.replace("\n", "<br>") + "\n"
-    html_report += "<h3>Additional Data:</h3>\n"
-    html_report += additional_report.replace("\n", "<br>") + "\n"
+    html_report = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lottery Analysis Report</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    h1, h2, h3 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+    h2 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 5px;
+    }
+    p {
+        margin-bottom: 5px;
+    }
+    .basic-analysis, .additional-analysis {
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lottery Analysis Report</h1>
+        <div class="basic-analysis">
+            <h2>Basic Analysis:</h2>
+            <p>{}</p>
+        </div>
+        <div class="additional-analysis">
+            <h2>Additional Data:</h2>
+            <p>{}</p>
+        </div>
+    </div>
+</body>
+</html>""".format(basic_report.replace("\n", "<br>"), additional_report.replace("\n", "<br>"))
     return html_report
 
 async def run_scraper(urls, db_session):
