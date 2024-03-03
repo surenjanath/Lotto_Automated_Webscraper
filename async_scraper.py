@@ -206,11 +206,11 @@ def generate_html_report(basic_analysis_report, additional_analysis_report, late
                 </table>
             </div>
             <div class="additional-analysis">
-                <h2>Latest NLCB Lotto Plus Results</h2>
+                <h2>Latest NLCB Lotto Plus Results:</h2>
             </div>
 
             <div class="draw-date">
-                <h3>Draw Date</h3>
+                <h3>Draw Date:</h3>
                 <p>{DrawDate}</p>
             </div>
 
@@ -220,10 +220,9 @@ def generate_html_report(basic_analysis_report, additional_analysis_report, late
             </div>
 
             <div class="latest-Information">
-                <h3>Other Information</h3>
+                <h3>Other Information:</h3>
                 <p>{additional}</p>
             </div>
-
         """
     return html_report
 
