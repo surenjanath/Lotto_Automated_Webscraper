@@ -215,7 +215,6 @@ def generate_html_report(basic_analysis_report, additional_analysis_report, late
                     <h3>Numbers Drawn:</h3>
                     <p>{numbers_drawn_formatted}</p>
                 </div>
-
                 <div class="latest-Information">
                     <h3>Other Information:</h3>
                     <p>{additional}</p>
@@ -271,10 +270,10 @@ def additional_analysis(data):
     # Generate analysis report
     analysis_report = ""
     if latest_entry:
-        analysis_report += f"- Power Ball: {latest_entry['Power Ball']}\n"
-        analysis_report += f"- Multiplier: {latest_entry['Multiplier']}\n"
-        analysis_report += f"- Jackpot: {latest_entry['Jackpot']}\n"
-        analysis_report += f"- Wins: {latest_entry['Wins']}\n"
+        analysis_report += f"Power Ball: {latest_entry['Power Ball']}\n"
+        analysis_report += f"Multiplier: {latest_entry['Multiplier']}\n"
+        analysis_report += f"Jackpot: {latest_entry['Jackpot']}\n"
+        analysis_report += f"Wins: {latest_entry['Wins']}\n"
     else:
         analysis_report += "- No data available.\n"
         latest_entry = None
