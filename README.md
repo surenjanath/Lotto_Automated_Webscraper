@@ -56,6 +56,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 <!--START_SECTION:analysis-->
 {{analysis_placeholder}}
 <h3>Basic Analysis:</h3>
-Total number of draws: 2305<br>Average jackpot amount: $3611693.41<br>Most common numbers drawn:<br>- Number 29: 353 times<br>- Number 25: 353 times<br>- Number 34: 351 times<br>- Number 27: 345 times<br>- Number 13: 345 times<br>- Number 28: 343 times<br>- Number 4: 342 times<br>- Number 1: 342 times<br>- Number 12: 339 times<br>- Number 9: 338 times<br>
+Total number of draws: 2306<br>Average jackpot amount: $3610127.19<br>Most common numbers drawn:<br>- Number 29: 353 times<br>- Number 25: 353 times<br>- Number 34: 351 times<br>- Number 27: 346 times<br>- Number 13: 345 times<br>- Number 4: 343 times<br>- Number 28: 343 times<br>- Number 1: 342 times<br>- Number 12: 339 times<br>- Number 9: 338 times<br>
 <h3>Additional Data:</h3>
-<br>Latest Entry Analysis:<br>- Draw Date: 2024-02-28<br>- Draw Number: 2305<br>- Numbers Drawn: 2-6-24-28-31<br>- Power Ball: 5<br>- Multiplier: 4<br>- Jackpot: 0<br>- Wins: -1<br>
+<br>Latest Entry Analysis:<br>- Draw Date: 2024-03-02<br>- Draw Number: 2306<br>- Numbers Drawn: 4-5-10-24-27<br>- Power Ball: 7<br>- Multiplier: 4<br>- Jackpot: 0<br>- Wins: -1<br>
