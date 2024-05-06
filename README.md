@@ -59,11 +59,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 <h1>Lottery Analysis Report</h1>
             <div class="basic-analysis">
                 <h2>Basic Analysis:</h2>
-                <p>Total number of draws: 2287<br></p>
+                <p>Total number of draws: 2322<br></p>
             </div>
             <div class="average-jackpot">
                 <h2>Average Jackpot Amount:</h2>
-                <p>$3,561,735.54</p>
+                <p>$3,585,251.21</p>
             </div>
             <div class="most-common-numbers">
                 <h3>Top 5 Most Common Numbers Drawn:</h3>
@@ -72,11 +72,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
                         <th>Number</th>
                         <th>Frequency</th>
                     </tr>
-                    <tr><td>25</td><td>354 times
-</td></tr><tr><td>29</td><td>350 times
-</td></tr><tr><td>34</td><td>348 times
-</td></tr><tr><td>28</td><td>343 times
-</td></tr><tr><td>27</td><td>342 times
+                    <tr><td>25</td><td>356 times
+</td></tr><tr><td>29</td><td>355 times
+</td></tr><tr><td>34</td><td>351 times
+</td></tr><tr><td>27</td><td>349 times
+</td></tr><tr><td>13</td><td>348 times
 </td></tr>
                 </table>
             </div>
