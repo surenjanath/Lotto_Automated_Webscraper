@@ -75,8 +75,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
                     <tr><td>25</td><td>358 times
 </td></tr><tr><td>29</td><td>357 times
 </td></tr><tr><td>34</td><td>352 times
-</td></tr><tr><td>27</td><td>350 times
 </td></tr><tr><td>13</td><td>350 times
+</td></tr><tr><td>27</td><td>350 times
 </td></tr>
                 </table>
             </div>
