@@ -59,11 +59,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 <h1>Lottery Analysis Report</h1>
             <div class="basic-analysis">
                 <h2>Basic Analysis:</h2>
-                <p>Total number of draws: 2342<br></p>
+                <p>Total number of draws: 2343<br></p>
             </div>
             <div class="average-jackpot">
                 <h2>Average Jackpot Amount:</h2>
-                <p>$3,554,634.20</p>
+                <p>$3,553,117.07</p>
             </div>
             <div class="most-common-numbers">
                 <h3>Top 5 Most Common Numbers Drawn:</h3>
@@ -72,11 +72,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
                         <th>Number</th>
                         <th>Frequency</th>
                     </tr>
-                    <tr><td>25</td><td>359 times
+                    <tr><td>25</td><td>360 times
 </td></tr><tr><td>29</td><td>357 times
 </td></tr><tr><td>34</td><td>353 times
 </td></tr><tr><td>13</td><td>351 times
-</td></tr><tr><td>27</td><td>350 times
+</td></tr><tr><td>28</td><td>350 times
 </td></tr>
                 </table>
             </div>
@@ -84,15 +84,15 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
                 <h2>Latest NLCB Lotto Plus Results:</h2>
                 <div class="draw-date">
                     <h3>Draw Date:</h3>
-                    <p>13 July 2024</p>
+                    <p>17 July 2024</p>
                 </div>
                 <div class="numbers-drawn">
                     <h3>Numbers Drawn:</h3>
-                    <p>7, 13, 14, 16, 32</p>
+                    <p>9, 25, 28, 32, 33</p>
                 </div>
                 <br/>
                 <h3>Other Information:</h3>
-                <p>Power Ball: 9<br>Multiplier: 3<br>Jackpot: 0<br>Wins: -1<br></p>
+                <p>Power Ball: 4<br>Multiplier: 10<br>Jackpot: 0<br>Wins: -1<br></p>
 
             </div>
 
