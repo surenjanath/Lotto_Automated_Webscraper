@@ -59,11 +59,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 <h1>Lottery Analysis Report</h1>
             <div class="basic-analysis">
                 <h2>Basic Analysis:</h2>
-                <p>Total number of draws: 2345<br></p>
+                <p>Total number of draws: 2346<br></p>
             </div>
             <div class="average-jackpot">
                 <h2>Average Jackpot Amount:</h2>
-                <p>$3,550,086.70</p>
+                <p>$3,548,573.45</p>
             </div>
             <div class="most-common-numbers">
                 <h3>Top 5 Most Common Numbers Drawn:</h3>
@@ -84,15 +84,15 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
                 <h2>Latest NLCB Lotto Plus Results:</h2>
                 <div class="draw-date">
                     <h3>Draw Date:</h3>
-                    <p>24 July 2024</p>
+                    <p>27 July 2024</p>
                 </div>
                 <div class="numbers-drawn">
                     <h3>Numbers Drawn:</h3>
-                    <p>2, 8, 13, 20, 25</p>
+                    <p>1, 5, 11, 16, 17</p>
                 </div>
                 <br/>
                 <h3>Other Information:</h3>
-                <p>Power Ball: 9<br>Multiplier: 20<br>Jackpot: 0<br>Wins: -1<br></p>
+                <p>Power Ball: 7<br>Multiplier: 20<br>Jackpot: 0<br>Wins: -1<br></p>
 
             </div>
 
