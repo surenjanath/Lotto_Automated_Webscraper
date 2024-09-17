@@ -63,7 +63,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
             </div>
             <div class="average-jackpot">
                 <h2>Average Jackpot Amount:</h2>
-                <p>$3,679,666.26</p>
+                <p>$3,686,461.91</p>
             </div>
             <div class="most-common-numbers">
                 <h3>Top 5 Most Common Numbers Drawn:</h3>
@@ -92,7 +92,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
                 </div>
                 <br/>
                 <h3>Other Information:</h3>
-                <p>Power Ball: 9<br>Multiplier: 20<br>Jackpot: 0.0<br>Wins: -1<br></p>
+                <p>Power Ball: 9<br>Multiplier: 20<br>Jackpot: 16037721.42<br>Wins: 1<br></p>
 
             </div>
 
