@@ -59,11 +59,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 <h1>Lottery Analysis Report</h1>
             <div class="basic-analysis">
                 <h2>Basic Analysis:</h2>
-                <p>Total number of draws: 199<br></p>
+                <p>Total number of draws: 737<br></p>
             </div>
             <div class="average-jackpot">
                 <h2>Average Jackpot Amount:</h2>
-                <p>$2,281,405.77</p>
+                <p>$2,503,031.53</p>
             </div>
             <div class="most-common-numbers">
                 <h3>Top 5 Most Common Numbers Drawn:</h3>
@@ -72,11 +72,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
                         <th>Number</th>
                         <th>Frequency</th>
                     </tr>
-                    <tr><td>34</td><td>38 times
-</td></tr><tr><td>12</td><td>35 times
-</td></tr><tr><td>15</td><td>34 times
-</td></tr><tr><td>35</td><td>34 times
-</td></tr><tr><td>4</td><td>33 times
+                    <tr><td>34</td><td>122 times
+</td></tr><tr><td>29</td><td>120 times
+</td></tr><tr><td>16</td><td>119 times
+</td></tr><tr><td>27</td><td>115 times
+</td></tr><tr><td>7</td><td>114 times
 </td></tr>
                 </table>
             </div>
@@ -84,15 +84,15 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
                 <h2>Latest NLCB Lotto Plus Results:</h2>
                 <div class="draw-date">
                     <h3>Draw Date:</h3>
-                    <p>29 August 2009</p>
+                    <p>28 February 2009</p>
                 </div>
                 <div class="numbers-drawn">
                     <h3>Numbers Drawn:</h3>
-                    <p>2, 9, 15, 25, 35</p>
+                    <p>1, 5, 13, 17, 29</p>
                 </div>
                 <br/>
                 <h3>Other Information:</h3>
-                <p>Power Ball: 2<br>Multiplier: -1<br>Jackpot: 1000000.0<br>Wins: 0<br></p>
+                <p>Power Ball: 9<br>Multiplier: -1<br>Jackpot: 5828961.84<br>Wins: 0<br></p>
 
             </div>
 
