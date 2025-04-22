@@ -234,7 +234,10 @@ async def run_scraper(urls, db_session):
 
     # Perform basic analysis
     total_draws = len(scraper.ParsedData)
-    average_jackpot = sum(float(result['Jackpot']) for result in scraper.ParsedData) / total_draws
+    try:
+        average_jackpot = sum(float(result['Jackpot']) for result in scraper.ParsedData) / total_draws
+    exception as e:
+        average_jackpot = 0.0
 
     # Extract all numbers drawn
     all_numbers = [result['Numbers'].split("-") for result in scraper.ParsedData]
