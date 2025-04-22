@@ -69,7 +69,7 @@ class WebScraper:
         self.ParsedData = []
 
     async def fetch(self, session, year, month, url):
-        params = {'monthyear': f'{month}-{year}'}
+        params = {'monthyear': f'{month}-{year}', 'sid':'cb4a924b4b574e20dab97df23823194e92a644245b46a62e6a0111674afbbf4b'}
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0'}
            
        
