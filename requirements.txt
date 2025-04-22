@@ -3,3 +3,4 @@ requests
 SQLAlchemy
 pandas
 lxml
+html5lib
