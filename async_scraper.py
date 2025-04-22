@@ -70,7 +70,9 @@ class WebScraper:
 
     async def fetch(self, session, year, month, url):
         params = {'monthyear': f'{month}-{year}'}
-        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36'}
+        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0'}
+           
+       
         retries = 3
         for attempt in range(retries):
             try:
